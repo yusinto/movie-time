@@ -9,7 +9,12 @@
       font-weight: bold
 
   .genre-dropdown
-    width: 200px
+    width: 100%
 
   .success
     color: limegreen
+
+  @include breakpoint(medium)
+
+    .genre-dropdown
+      width: 200px

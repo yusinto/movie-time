@@ -62,7 +62,7 @@ class Home extends Component {
           </select>
         </div>
         <div className="table-scroll">
-          <table>
+          <table className="hover">
             <thead>
             <tr>
               <th width="400">Title</th>
