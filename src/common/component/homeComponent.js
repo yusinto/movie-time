@@ -1,6 +1,5 @@
 import React, {Component, PropTypes} from 'react';
 import Relay from 'react-relay';
-import {Link} from 'react-router';
 import {capitalize} from 'lodash';
 
 /*
@@ -75,7 +74,7 @@ class Home extends Component {
               this.props.viewer.movieList.map((item, index) =>
                 <tr key={index}>
                   <td>
-                    <Link to={`/movie/${item.title}`}>{item.title}</Link>
+                    {item.title}
                   </td>
                   <td>
                     {
