@@ -1,0 +1,45 @@
+enum Classification {
+  UNCLASSIFIED
+  GENERAL
+  PARENTAL_GUIDANCE
+  PARENTAL_GUIDANCE_13
+  RESTRICTED
+}
+
+enum Genre {
+  ACTION
+  ADVENTURE
+  ANIMATION
+  BIOGRAPHY
+  COMEDY
+  CRIME
+  DRAMA
+  FAMILY
+  FANTASY
+  HISTORY
+  MUSIC
+  MUSICAL
+  MYSTERY
+  ROMANCE
+  SCIFI
+  THRILLER
+  WAR
+  WESTERN
+}
+
+type Movie {
+  rating: Float
+  genres: [Genre]
+  classification: Classification
+  languages: [String]
+  title: String
+}
+
+type MovieList {
+  items(genre: String): [Movie]
+  allGenres: [String]
+}
+
+type Query {
+  movieList(genre: String): MovieList
+}

@@ -1,0 +1,36 @@
+
+.app-root
+
+  .header
+    @include grid-row()
+
+    height: 100px
+    padding-top: 15px
+
+    .logo
+      @include grid-column(3)
+      padding-bottom: 10px
+
+      img
+        min-width: 238px
+
+    .menu-container
+      @include grid-row()
+      @include grid-column($gutter: 0px)
+
+      border-top: 5px solid $color-2
+
+  .body
+    @include grid-row()
+
+    height: 500px
+    padding-top: 50px
+    margin-left: 25px
+    margin-right: 25px
+
+  @include breakpoint(large)
+
+    .body
+      margin-left: auto
+      margin-right: auto
+      padding-left: 20px

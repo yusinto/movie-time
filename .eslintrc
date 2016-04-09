@@ -1,0 +1,57 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "globals": {
+    "__DEV__"      : false,
+    "__PROD__"     : false,
+    "__DEBUG__"    : false,
+    "__DEBUG_NW__" : false,
+    "__DEV_TOOLS__": false
+  },
+  "rules": {
+    "comma-dangle": [1, "never"],
+    "key-spacing": [0, {
+      "beforeColon": true,
+      "afterColon": true
+    }],
+    "no-nested-ternary": 0,
+    "new-cap": 0,
+    "no-else-return": 0,
+    "eol-last": 0,
+    "no-undef": 2,
+    "max-len": [ 0, 80, 4 ],
+    "no-underscore-dangle": [ 0 ],
+    "no-var": 2,
+    "jsx-quotes": 2,
+    "react/display-name": 0,
+    "react/jsx-boolean-value": 2,
+    "react/jsx-no-undef": 2,
+    "react/jsx-sort-props": 0,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/no-did-mount-set-state": 1,
+    "react/no-did-update-set-state": 2,
+    "react/no-multi-comp": 0,
+    "react/no-unknown-property": 2,
+    "react/prop-types": 2,
+    "react/react-in-jsx-scope": 2,
+    "react/self-closing-comp": 2,
+    "react/wrap-multilines": 2,
+    "react/prefer-stateless-function": 1,
+    "react/jsx-space-before-closing": 0,
+    "react/jsx-closing-bracket-location": 1,
+    "react/jsx-indent-props": 0,
+    "quotes": [ 2, "single" ],
+    "space-before-function-paren": [
+      0,
+      {
+        "anonymous": "always",
+        "named": "never"
+      }
+    ],
+    "strict": [ 2, "global" ],
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "spaced-comment": 0,
+    "object-curly-spacing": 0
+  }
+}
