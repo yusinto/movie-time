@@ -35,11 +35,11 @@ type Movie {
   title: String
 }
 
-type MovieList {
-  items(genre: String): [Movie]
-  allGenres: [String]
+type Query {
+  viewer: User
 }
 
-type Query {
-  movieList(genre: String): MovieList
+type User {
+  movieList(genre: String): [Movie]
+  allGenres: [String]
 }

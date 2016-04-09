@@ -125,10 +125,10 @@ const movie = new GraphQLObjectType({
   }
 });
 
-const movieList = new GraphQLObjectType({
-  name: 'MovieList',
+const userType = new GraphQLObjectType({
+  name: 'User',
   fields: {
-    items: {
+    movieList: {
       type: new GraphQLList(movie),
       args: {
         genre: {type: GraphQLString}
@@ -145,12 +145,11 @@ const movieList = new GraphQLObjectType({
 const queryType = new GraphQLObjectType({
   name: 'Query',
   fields: {
-    movieList: {
-      type: movieList,
-      args: {
-        genre: {type: GraphQLString}
-      },
-      resolve: () => []
+    viewer: {
+      type: userType,
+      resolve: () => {
+        return {};
+      }
     }
   }
 });

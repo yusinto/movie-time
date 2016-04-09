@@ -18,7 +18,10 @@ const setDefaultGenre = (params) => {
 const Routes =
   (<Route path="/" component={App}>
     <IndexRedirect to="/home"/>
-    <Route path="/home(/:genre)" component={Home} queries={homeQueries} renderLoading={() => <Loader />} prepareParams={setDefaultGenre}/>
+    <Route path="/home" component={Home} queries={homeQueries}
+           stateParams={['genre']}
+           renderLoading={() => <Loader />}
+           prepareParams={setDefaultGenre}/>
   </Route>);
 
 export default Routes;

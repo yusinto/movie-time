@@ -5,5 +5,5 @@ import Relay from 'react-relay';
  * */
 
 export const homeQueries = {
-  movieList: () => Relay.QL`query { movieList(genre: $genre) }`
+  viewer: () => Relay.QL`query { viewer }`
 };

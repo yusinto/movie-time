@@ -11,6 +11,7 @@ This is a single page app implemented using:
  * Webpack
  * Hot module replacement
  * Babel
+ * Eslint
  * Foundation 6
  * Mocha & Chai
 
