@@ -15,12 +15,6 @@ class Home extends Component {
   };
 
   onChangeGenre = ({target: {value}}) => {
-    //TODO:
-    // this.props.relay.setVariables({
-    //   genre: value
-    // });
-
-    // programmatically update route to new value
     browserHistory.push(`/home/${value}`);
   };
 
