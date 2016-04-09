@@ -5,28 +5,11 @@ import {homeQueries} from './query';
 import Home from './component/homeComponent';
 import Loader from './component/loaderComponent';
 
-// const setDefaultGenre = (nextState, replace) => {
-//   if (!nextState.params.genre) {
-//     replace({
-//       pathname: '/home/all'
-//     });
-//
-//     return;
-//   }
-//
-//   // if genre is not all low caps, then convert to low caps
-//   const lowerCasedGenre = nextState.params.genre.toLowerCase();
-//   if(lowerCasedGenre !== nextState.params.genre)
-//   replace({
-//     pathname: `/home/${lowerCasedGenre}`
-//   });
-// };
-
 const setDefaultGenre = (params) => {
   return {
     ...params,
     genre: params.genre ? params.genre.toLowerCase() : 'all'
-  }
+  };
 };
 
 /*

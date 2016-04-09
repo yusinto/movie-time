@@ -41,6 +41,7 @@
     "react/jsx-space-before-closing": 0,
     "react/jsx-closing-bracket-location": 1,
     "react/jsx-indent-props": 0,
+    "arrow-body-style": 0,
     "quotes": [ 2, "single" ],
     "space-before-function-paren": [
       0,

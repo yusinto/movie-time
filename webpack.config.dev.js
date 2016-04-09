@@ -9,9 +9,9 @@ module.exports = {
         publicPath: '/dist/'
     },
     module: {
-        // preLoaders: [
-        //     {test: /\.js$/, loader: "eslint-loader", include: /src/}
-        // ],
+        preLoaders: [
+            {test: /\.js$/, loader: "eslint-loader", include: /src/}
+        ],
         loaders: [{
             test: /\.jsx?$/,
             loader: 'babel',
