@@ -7,12 +7,12 @@ import {filter, find} from 'lodash';
 
 // Given a genre, return all movies belonging to that genre (sort of mocking our stored procedure call)
 export const getMoviesRepository = genre => {
-  genre = genre.toLowerCase();
 
-  // if genre is not specified, return all movies
-  if(!genre || genre === 'all') {
+  // if genre is not specified return all movies
+  if(!genre || genre.toLowerCase() === 'all') {
     return data;
   }
 
+  genre = genre.toLowerCase();
   return filter(data, d => find(d.genres, g => g.toLowerCase() === genre));
 };
