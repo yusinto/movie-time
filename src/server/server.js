@@ -31,6 +31,7 @@ app.use(Express.static('public'));
 app.use('/graphql', graphqlHttp({schema: schema, pretty: true}));
 
 app.use((req, res) => {
+    //TODO: Server side rendering intentionally left out due to time constraints
     res.end(htmlString);
 });
 
