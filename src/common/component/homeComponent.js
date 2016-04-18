@@ -1,14 +1,12 @@
 import React, {Component, PropTypes} from 'react';
-import Relay from 'react-relay';
 import {capitalize} from 'lodash';
 
 /*
  * This is the index page. It shows a list of movies and their genres filterable by a genre dropdown.
  * */
-class Home extends Component {
+export default class Home extends Component {
   static propTypes = {
     viewer: PropTypes.object.isRequired,
-    params: PropTypes.object.isRequired,
     relay: PropTypes.object.isRequired
   };
 
@@ -50,7 +48,7 @@ class Home extends Component {
 
     return (
       <div className="home-root">
-        <p>
+        <p className="header-summary">
           {headerSummary}
         </p>
         <div>
@@ -89,25 +87,3 @@ class Home extends Component {
       </div>);
   }
 }
-
-
-Home = Relay.createContainer(Home, {
-  initialVariables: {
-    genre: ''
-  },
-  fragments: {
-    /*eslint-disable no-unused-vars*/
-    viewer: () => Relay.QL`
-            fragment on User {
-                movieList(genre: $genre) {
-                    title,
-                    genres
-                },
-                allGenres
-            }
-        `
-  }
-  /*eslint-enable no-unused-vars*/
-});
-
-export default Home;

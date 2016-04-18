@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, IndexRedirect} from 'react-router';
 import App from './component/appComponent';
 import {homeQueries} from './query';
-import Home from './component/homeComponent';
+import Home from './container/homeContainer';
 import Loader from './component/loaderComponent';
 
 const setDefaultGenre = (params) => {
