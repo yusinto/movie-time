@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "npm run update-schema",
     "start": "node src/server/index.js",
-    "test": "mocha --compilers js:babel-core/register --require ./src/test/testFrameworkSetup.js src/test/**/*Test.js",
+    "test": "mocha --compilers js:babel-core/register --require ./src/test/testFrameworkSetup.js src/test/common/component/homeComponentTest.js",
     "update-schema": "babel-node ./src/graphql/updateSchema.js",
     "extract-enum": "babel-node ./src/graphql/extractEnum.js"
   },
@@ -29,7 +29,7 @@
     "lodash": "^4.8.2",
     "react": "^0.14.8",
     "react-dom": "^0.14.7",
-    "react-relay": "^0.7.3",
+    "react-relay": "^0.8.0",
     "react-router": "^2.0.0",
     "react-router-relay": "^0.9.5"
   },
@@ -38,7 +38,7 @@
     "babel-eslint": "^6.0.2",
     "babel-loader": "^6.2.4",
     "babel-plugin-react-transform": "^2.0.2",
-    "babel-relay-plugin": "^0.7.3",
+    "babel-relay-plugin": "^0.8.0",
     "chai": "^3.5.0",
     "chai-as-promised": "^5.3.0",
     "css-loader": "^0.23.1",
@@ -51,7 +51,6 @@
     "mocha": "^2.4.5",
     "node-sass": "^3.4.2",
     "react-addons-test-utils": "^0.14.8",
-    "react-relay": "^0.7.3",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
     "redbox-react": "^1.2.2",

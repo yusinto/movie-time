@@ -4,6 +4,7 @@
  variable named Component.
  */
 import React, {Component, PropTypes} from 'react';
+import Relay from 'react-relay';
 import {Link} from 'react-router';
 
 /*
@@ -19,6 +20,7 @@ export default class App extends Component {
   };
 
   render() {
+    console.log(`environment looks like ${JSON.stringify(Relay.PropTypes)}`);
     return (
       <div className="app-root">
         <div className="header">
