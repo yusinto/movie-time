@@ -5,6 +5,7 @@ import {renderIntoDocument, findRenderedDOMComponentWithClass, scryRenderedDOMCo
 import HomeContainer from '../../../../src/common/container/homeContainer';
 import HomeComponent from '../../../../src/common/component/homeComponent';
 import ReactTestUtils from 'react-addons-test-utils';
+import RelayTestUtils from '../../relayTestUtils';
 
 describe('Home Component Tests', () => {
   it('requires a Container prop', () => {
@@ -15,11 +16,33 @@ describe('Home Component Tests', () => {
 
     const queryConfig = MockRoute;
     const environment = new Relay.Environment();
-    const ShallowRenderer = ReactTestUtils.createRenderer();
+    //const shallowRenderer = ReactTestUtils.createRenderer();
+    const relayRenderer = RelayTestUtils.createRenderer();
 
-    ShallowRenderer.render(
-      <Relay.Renderer queryConfig={queryConfig} environment={environment} />
-    );
+    //function someMethod(mockGenerator) {
+    //  return <HomeContainer viewer={mockGenerator('42')} />
+    //}
+    //
+    //relayRenderer.render(someMethod, environment, queryConfig);
+    //
+    //someMethod(dataID => new MockPointer(dataID));
+
+    class MockPointer {
+      constructor(dataID) {
+        this.dataID = dataID;
+      }
+    }
+
+    relayRenderer.render(<HomeContainer viewer={new MockPointer('42')} />,
+      environment,
+      queryConfig);
+
+    //shallowRenderer.render(
+    //  <Relay.Renderer queryConfig={queryConfig} environment={environment}/>
+    //);
+    //
+    //const output = shallowRenderer.getRenderOutput();
+    //expect(output.type).to.equal('div');
 
     //expect(() => ShallowRenderer.render(
     //  <Relay.Renderer queryConfig={queryConfig} environment={environment} />
