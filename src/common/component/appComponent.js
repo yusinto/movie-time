@@ -35,6 +35,12 @@ export default class App extends Component {
                       :
                       <li><Link to="/">Home</Link></li>
                   }
+                  {
+                    this.props.location.pathname === '/' || this.props.location.pathname.startsWith('/contact') ?
+                      <li className="active menu-text"><span>Contact</span></li>
+                      :
+                      <li><Link to="/contact">Contact</Link></li>
+                  }
                 </ul>
               </div>
             </div>
