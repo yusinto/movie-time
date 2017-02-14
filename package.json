@@ -37,7 +37,7 @@
     "babel-eslint": "^6.0.2",
     "babel-loader": "^6.2.4",
     "babel-plugin-react-transform": "^2.0.2",
-    "babel-polyfill": "^6.20.0",
+    "babel-polyfill": "^6.23.0",
     "babel-preset-latest": "^6.16.0",
     "babel-relay-plugin": "^0.7.3",
     "chai": "^3.5.0",
